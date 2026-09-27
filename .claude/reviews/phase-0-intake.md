@@ -52,3 +52,33 @@
 ## Gate result
 
 The document is complete and readable. **Three expected items are absent:** two of the four Ch 03 worked examples, the "When Not to Use This" boxes in Ch 01, 02 and 04–08, and the Visual Integration Map. Crisis resources are also located somewhere other than the brief assumes. Phase 2 is on hold per the author's instruction.
+
+---
+
+## Addendum — version check (2026-09-27)
+
+**Is the reviewed PDF the amended draft? No.** The PDF has neither amendment:
+
+| Amendment | In the PDF? | In `Revised Sections (Orientation + Chapter 03).md`? |
+|---|---|---|
+| Orientation, Operating Rule 2: voice-memo / dictation sentence | No. Rule 2 ends at "it isn't just a record of it." | Yes |
+| Chapter 03, Worked Examples Three and Four | No. Only One and Two. | Yes: Three (domestic accumulation), Four (administrative debt) |
+| Chapter 03 closing line, "in both examples" → "across all four examples" | No. The PDF says "in both examples". | Yes |
+
+Word-level comparison of the two sections, ignoring punctuation and markdown formatting, found one other difference:
+
+- The revised Orientation has **no citation marker** after "…better with some professional support than without it." The PDF has `[i]`, which points to the Cuijpers et al. (2010) entry in Notes. Either this was intended or it was lost in the move to markdown. The author should check.
+
+The rest of both sections is word-for-word the same as the PDF.
+
+**The revised-sections file is not a full draft.** It has Orientation and Chapter 03 only (1,612 words). Phase 0 cannot pass on it. It is not being spliced into the PDF text, because building a manuscript is the author's job, not the reviewer's. **Phase 0 must be re-run against a complete amended draft.**
+
+## Carry-forward for the Phase 2 session
+
+These were decided by the author and must be applied in the next session:
+
+1. **Re-run Phase 0** against the complete amended draft. Confirm that both amendments above are present before going any further.
+2. **Then amend Reader 4's brief** (`.claude/agents/reader-4-clinician.md`). It currently audits crisis resources in "Appendix D" only. Change it to audit crisis resources **wherever they appear in the manuscript**, and require Reader 4 to **list which locations it audited**. Do not make this change before the correct draft is confirmed.
+3. **Log that amendment** in `.claude/reviews/consolidated-report.md`: what changed, why (Appendix D holds no crisis resources in this edition), and when.
+4. `.claude/context/` stays gitignored. The author re-uploads the manuscript each session.
+5. Dispatch readers by name from a fresh session, so each agent's tool list is enforced.
