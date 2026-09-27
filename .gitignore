@@ -1,0 +1,3 @@
+# Manuscript copies stay local until the author says otherwise
+.claude/context/
+.claude/reviews/scratch/
