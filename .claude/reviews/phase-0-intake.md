@@ -82,3 +82,89 @@ These were decided by the author and must be applied in the next session:
 3. **Log that amendment** in `.claude/reviews/consolidated-report.md`: what changed, why (Appendix D holds no crisis resources in this edition), and when.
 4. `.claude/context/` stays gitignored. The author re-uploads the manuscript each session.
 5. Dispatch readers by name from a fresh session, so each agent's tool list is enforced.
+
+---
+
+## Phase 0 re-run — complete amended draft (2026-09-27)
+
+**Source:** `Tools, Not Theory - Complete Manuscript.md` (uploaded by the author, 2026-09-27)
+**Local copy (not committed):** `.claude/context/manuscript.md`, SHA-256 `6961514b…7fdceaf41`. This is the path to give the readers.
+
+### Read status
+
+- **Read in full:** yes. The file is 958 lines of Markdown (the last line has no trailing newline) and nothing is truncated. It ends with the closing colophon.
+- **Word count:** 9,663 words with the Markdown syntax removed. The PDF had 9,283. The difference is mostly Examples Three and Four in Ch 03.
+- **Chapter count:** 11 numbered chapters (00–10) in four Parts, the same as the PDF.
+- **Format:** this is Markdown, not a laid-out PDF. Readers will see these rendering details:
+  - The **Ch 01 loop** is one line of text with `->` arrows. It does not show the loop closing back on itself. The caption underneath ("The loop runs on its own") does the work.
+  - The **Ch 08 missed-day flow** is box-drawing text in a code block. It reads correctly in a monospace font but may wrap on a narrow screen.
+  - The **Ch 02 field sheet** labels use LaTeX (`$(P\ge4)$`, `$(A\ge4)$`). A viewer that doesn't render maths shows the raw source.
+  - The **Appendix C4** table uses `<br>` inside cells.
+
+### Amendment check
+
+| Amendment | In this draft? | Where |
+|---|---|---|
+| Orientation, Operating Rule 2: voice-memo / dictation sentence | **Yes** | Introduction, Three Operating Rules, rule 2 |
+| Chapter 03, Worked Example Three (domestic accumulation) | **Yes** | Ch 03, The Thought Record |
+| Chapter 03, Worked Example Four (administrative debt) | **Yes** | Ch 03, The Thought Record |
+| Ch 03 closing line: "across all four examples" | **Yes** | "The shape is identical across all four examples." |
+| Citation marker after "…better with some professional support than without it." (flagged as possibly lost) | **Restored** as `[I]` | Introduction, "What this is not". It matches the `INTRODUCTION [I]` heading in Notes. |
+
+Both amendments are present and the missing citation question is settled.
+
+### Structure checklist
+
+| Item | Status |
+|---|---|
+| Read This First (crisis box) | Present |
+| Orientation: Introduction and Triage | Present |
+| Chapters 00–10 | All present |
+| Appendices A–D, Notes, Closing Note | All present |
+| Citation markers | Every marker used in the text (`[I]`, `[0]`–`[10]`, `[C]`) has a matching Notes entry, and every Notes entry is cited |
+| Truncated, missing or unreadable sections | None found |
+
+**New front matter not recorded in the PDF intake:** a Health notice, a Privacy note (the worksheet fields save nothing), and a Composite examples note. The composite note says every example except Ch 03's first is a composite, which is consistent with the four examples. I can't say whether these were in the PDF, because the PDF copy was not kept between sessions.
+
+### Items the author asked to check (status now)
+
+| Check | Result |
+|---|---|
+| Chapter 03: four worked examples | **Present:** One (the author's own), Two (job applications), Three (domestic accumulation), Four (administrative debt). |
+| "When Not to Use This" boxes in Ch 01, 02, 04–08 | **Still not present.** The only one is in Ch 03, and it is now a plain paragraph that starts "When not to use this." rather than a headed box. Related material is still where it was: the escalation line in Ch 08, the self-harm redirect at the top of Ch 09, and the bipolar caution in Ch 00. Reader 4 already treats this as an open item. |
+| One-page Visual Integration Map at the front | **Still not present.** The Triage table is the only routing device. |
+
+### Where crisis resources appear in this draft
+
+This list is for Reader 4's widened audit (see below).
+
+| Location | What is there |
+|---|---|
+| Copyright page | Note that resources were current at publication. Fallback: local emergency number or findahelpline.com |
+| Read This First | Emergency numbers (US/Canada 911, UK 999, EU and India 112, Australia 000, UAE 999, with 998 for an ambulance) and helplines (988 US/Canada; Samaritans 116 123 UK and Ireland; Lifeline 13 11 14 Australia; findahelpline.com elsewhere) |
+| Introduction, Who This Is For | Crisis readers are routed to Ch 00 |
+| Triage | "I'm not sure I'm safe" → Read This First |
+| Ch 00, Decide Now (escalation table) | Thoughts of death, suicide or self-harm → Read This First |
+| Ch 09, opening | Self-harm redirect → Read This First |
+| Appendix B, first row | Thoughts of harming yourself → Read This First; contact a person or service |
+| Appendix C4, Safety Plan step 5 | The reader fills in their own professionals and crisis lines |
+| Appendix D | **No crisis resources**, as in the PDF |
+
+These numbers have **not** been verified here. Verification is Reader 4's job.
+
+### Other observations (not blockers; for the author)
+
+- **ISBN check digit.** `979-8-89214-000-0` fails the ISBN-13 checksum. For these first twelve digits the check digit would be 3. If this is a placeholder, ignore this.
+- **Naming.** The Composite examples note says "Chapter 3". Everywhere else the book says "Chapter 03".
+
+### Gate result (re-run)
+
+**PASS.** The draft is complete and readable, and both amendments are confirmed. Two items are still absent: the "When Not to Use This" boxes in Ch 01, 02 and 04–08, and the Visual Integration Map. Reader 4's brief already treats the boxes as an open item. Targeted question 1 (four Ch 03 examples) now matches the manuscript.
+
+### Carry-forward status
+
+1. Re-run Phase 0 against the complete amended draft: **done**. See above.
+2. Amend Reader 4's brief to audit crisis resources wherever they appear and to list the locations it audited: **done**.
+3. Log that amendment in `.claude/reviews/consolidated-report.md`: **done**.
+4. `.claude/context/` stays gitignored: **confirmed**. The manuscript copy is local only.
+5. Dispatch readers by name, with Reader 4 first: **done** (2026-09-27). Reports and the Phase 3 consolidation are in `.claude/reviews/`.
