@@ -92,7 +92,7 @@ These were decided by the author and must be applied in the next session:
 
 ### Read status
 
-- **Read in full:** yes. The file is 957 lines of Markdown and nothing is truncated. It ends with the closing colophon.
+- **Read in full:** yes. The file is 958 lines of Markdown (the last line has no trailing newline) and nothing is truncated. It ends with the closing colophon.
 - **Word count:** 9,663 words with the Markdown syntax removed. The PDF had 9,283. The difference is mostly Examples Three and Four in Ch 03.
 - **Chapter count:** 11 numbered chapters (00–10) in four Parts, the same as the PDF.
 - **Format:** this is Markdown, not a laid-out PDF. Readers will see these rendering details:
@@ -167,4 +167,4 @@ These numbers have **not** been verified here. Verification is Reader 4's job.
 2. Amend Reader 4's brief to audit crisis resources wherever they appear and to list the locations it audited: **done**.
 3. Log that amendment in `.claude/reviews/consolidated-report.md`: **done**.
 4. `.claude/context/` stays gitignored: **confirmed**. The manuscript copy is local only.
-5. Dispatch readers by name, with Reader 4 first: **not started**. Waiting for the author's go-ahead.
+5. Dispatch readers by name, with Reader 4 first: **done** (2026-09-27). Reports and the Phase 3 consolidation are in `.claude/reviews/`.
