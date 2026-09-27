@@ -20,9 +20,10 @@ Pass 2 of production, 27 September 2026. It applies the author's sign-offs and a
 | Item | Author's answer | What changed |
 |---|---|---|
 | Crisis numbers | All verified, 27 Sep 2026; remove India | Tags removed, India removed, check date printed |
-| ISBN | Invalid; get a new one | Replaced with "ISBN: to be assigned before publication". An ISBN can't be generated here: it has to be issued to the publisher by an ISBN agency or a publishing platform. See §5. |
+| ISBN | Invalid; get a new one | Replaced with "ISBN: to be assigned before publication". An ISBN can't be generated here: it has to be issued to the publisher by an ISBN agency or a publishing platform. See §5 and §9. |
 | Stanley-Brown permission | Confirmed | No text change. If the rights holder asked for specific credit wording, it still needs adding to Appendix C4. |
 | EPUB | No pipeline; needs help | Built one. See §7. |
+| Cover image | UAE; working draft attached (pass 3) | Embedded in the EPUB. See §9. |
 
 ## 3. Findings applied in this pass
 
@@ -190,3 +191,34 @@ The author's decision still stands: keep the opening line, add guardrails, add a
   - a final line that goes beyond output;
   - the support pointer to a person and to compassion-focused therapy (CFT) in Appendix D (pass 1).
 - **Unchanged:** the four response steps, the three signs, and the chapter's argument.
+
+---
+
+## 9. Cover image (pass 3, 27 September 2026)
+
+Two files were supplied. Both are saved in `cover/`:
+
+- **`cover/cover.jpg`** (1024×1536px) — no design annotations, no stray elements. This is the one embedded in the EPUB.
+- **`cover/cover-draft-annotated.jpg`** (768×1376px) — same design, but it carries a red annotation line ("POSITIONING SHARP. built for low-capacity days.") and an extra checkbox glyph disconnected from the arrow chain at bottom right. Kept for reference only; **not** used in the build. If that annotation and the stray checkbox were meant to stay, say so and I'll swap the embedded file.
+
+**What was done:** `build/build_ebook.py` now passes `cover/cover.jpg` to pandoc as the EPUB's cover image. Rebuilt and re-validated: **EPUBCheck 5.1.0, 0 errors, 0 warnings**, cover displays correctly as the book's first page (checked in a phone-width screenshot).
+
+**Before this goes to a store, flag two things:**
+
+1. **Resolution.** 1024×1536px (ratio 1.5:1) clears Amazon KDP's stated minimum (1000px on the shortest side) but is short of KDP's *recommended* 2560×1600px, and the ratio KDP asks for is 1.6:1, not 1.5:1. It's fine for the EPUB itself, which never displays a cover at full size. If this cover is also going on a print edition or a store listing, ask whoever made it for a higher-resolution export at 1.6:1 before final upload.
+2. **UAE placement rule** (see §5 below): the ISBN has to be printed on the outside of the back cover, once one exists. This cover is front-only, so that's a separate back-cover design step, not something I can add to a JPEG without design input.
+
+## 5b. ISBN in the UAE — researched this pass
+
+Sourced from the UAE National Library and Archives' own ISBN service page and a supporting search, both 27 September 2026:
+
+- **Who issues it.** The National Library and Archives (NLA) is now the UAE's official ISBN agency — it joined the international ISBN network on 9 January 2026. Before that date the UAE had no national agency, so this is a recent change.
+- **How to apply.** Through the NLA's own portal, ISBNuae, at **nld.nla.ae**. You'll need to be an individual, company or organisation based in the UAE, applying for a publication you intend to make publicly available.
+- **Cost.** Free. No fee for assignment or use.
+- **Turnaround.** The NLA's page states "a maximum of five working days" once an application meets the criteria; one fetch of the same page also rendered this as "five (3)", which reads as a garbled extraction rather than two different numbers, so treat "five working days" as the figure and confirm it on the portal when you apply.
+- **Where it has to go on the physical book:** the lower corner of the back of the title page, and the bottom of the outside of the back cover. For an ebook, on both the file and its cover.
+- **One more requirement the search surfaced:** the NLA asks for three deposit copies after publication, for the national bibliography and preservation. Confirm this applies to a self-published ebook, not only print, before you rely on it.
+
+**UNVERIFIED — AUTHOR SHOULD CONFIRM ON THE PORTAL:** the exact processing time, and whether the three-copy deposit requirement applies to an ebook-only release. Everything else above matches the agency's own page.
+
+Sources: [UAE National ISBN Centre – NLA](https://www.nla.ae/en/national-library/isbn-service/) (fetched directly, and corroborated by web search on the same date).

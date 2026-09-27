@@ -8,6 +8,7 @@ import pypandoc
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "Tools_Not_Theory_Production.md"
+COVER = ROOT / "cover" / "cover.jpg"
 BUILD = ROOT / "build"
 DIST = ROOT / "dist"
 DIST.mkdir(exist_ok=True)
@@ -43,9 +44,14 @@ meta = [
 ]
 common = ["--from=markdown+pipe_tables+backtick_code_blocks+raw_html-implicit_figures", "--split-level=1", "--toc-depth=2"]
 
+epub_args = common + meta + [f"--css={BUILD / 'ebook.css'}"]
+if COVER.exists():
+    epub_args.append(f"--epub-cover-image={COVER}")
+else:
+    print(f"No cover found at {COVER}; building without one.", file=sys.stderr)
+
 epub = DIST / "Tools_Not_Theory.epub"
-pypandoc.convert_file(str(BUILD / "ebook-source.md"), "epub3", outputfile=str(epub),
-                      extra_args=common + meta + [f"--css={BUILD / 'ebook.css'}"])
+pypandoc.convert_file(str(BUILD / "ebook-source.md"), "epub3", outputfile=str(epub), extra_args=epub_args)
 print("EPUB:", epub, epub.stat().st_size, "bytes")
 
 # PDF proof: one standalone HTML page printed by headless Chromium.
